@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "amd",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "outFile": "build/Bluewire.Epro.Modern.Framework.js",
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "allowUnreachableCode": false,
+    "noImplicitReturns": true,
+    "baseUrl": "./",
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "lib": [ "dom", "es5", "es2015.iterable", "es2015.promise" ],
+    "declaration": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "types": [],
+    "typeRoots": [],
+    "strictNullChecks": true,
+    "declarationMap": true,
+    "composite": true
+  },
+  "compileOnSave": false,
+  "include": [
+    "react-augmented.ts",
+    "Framework/**/*.ts",
+    "Specs/**/*.ts",
+    "../Epro.Mobile/Dependencies/jquery.d.ts",
+    "../Epro.Mobile/Dependencies/jasmine.d.ts",
+    "../Epro.Mobile/Dependencies/JasmineAddons.d.ts",
+    "../Epro.Mobile/Dependencies/underscore.d.ts",
+    "../Epro.Mobile/Dependencies/moment.d.ts",
+    "../Epro.Mobile/Dependencies/jquery.cookie.d.ts",
+    "../Epro.Mobile/Dependencies/underscore.string.d.ts",
+    "../Epro.Mobile/Dependencies/redux.d.ts",
+    "../Epro.Mobile/Dependencies/rangy-core.d.ts"
+  ]
+}

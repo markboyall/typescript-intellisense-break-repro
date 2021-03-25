@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="build\**" />
+    <Compile Remove="node_modules\**" />
+    <EmbeddedResource Remove="build\**" />
+    <EmbeddedResource Remove="node_modules\**" />
+    <None Remove="build\**" />
+    <None Remove="node_modules\**" />
+    <!-- Ensure that VS knows to look for these files when considering whether or not to build the project -->
+    <UpToDateCheckInput Include="**/*.ts;**/*.js;**/*.css;**/*.less;**/*.html" Exclude="build/**/*.*;bin/**/*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bluewire.Epro.Modern.Framework\Bluewire.Epro.Modern.Framework.csproj">
+      <Project>{acc9d3e4-2c69-4ac8-b05f-f7242684c997}</Project>
+      <Name>Bluewire.Epro.Modern.Framework</Name>
+      <Targets>GetGulpOutput</Targets>
+      <OutputItemType>ScriptProjectReference</OutputItemType>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+  <!-- Let the props and targets override default ones from the SDK -->
+  <Import Project="Bluewire.Epro.Modern.ServiceAndGeneratedPages.props" />
+  <Import Project="Bluewire.Epro.Modern.ServiceAndGeneratedPages.targets" />
+</Project>
